@@ -1,0 +1,51 @@
+@startuml
+
+  namespace clases {
+    class clases.Administrativo {
+        # hsExtra : Integer
+        # hsMes : Integer
+        + getHsExtra()
+        + getHsMes()
+        + getSueldo()
+        + setHsExtra()
+        + setHsMes()
+    }
+  }
+  
+
+  namespace clases {
+    abstract class clases.Empleado {
+        # apellido : String
+        # dni : Integer
+        # email : String
+        # nombre : String
+        # sueldoBase : Double
+        + getApellido()
+        + getDni()
+        + getEmail()
+        + getNombre()
+        {abstract} + getSueldo()
+        + getSueldoBase()
+        + setApellido()
+        + setDni()
+        + setEmail()
+        + setNombre()
+        + setSueldoBase()
+    }
+    }
+  
+
+  namespace clases {
+    class clases.Vendedor {
+        # porcentajeComision : Integer
+        # totalVentas : Integer
+        + getSueldo()
+    }
+  }
+  
+
+  clases.Administrativo -up-|> clases.Empleado
+  clases.Vendedor -up-|> clases.Empleado
+
+
+@enduml

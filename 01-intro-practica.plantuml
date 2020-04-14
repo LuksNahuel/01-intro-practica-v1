@@ -1,0 +1,25 @@
+@startuml
+
+  namespace clases {
+    class clases.Administrativo {
+    }
+  }
+  
+
+  namespace clases {
+    abstract class clases.Empleado {
+    }
+  }
+
+
+  namespace clases {
+    class clases.Vendedor {
+    }
+  }
+  
+
+  clases.Administrativo -up-|> clases.Empleado
+  clases.Vendedor -up-|> clases.Empleado
+
+
+@enduml
